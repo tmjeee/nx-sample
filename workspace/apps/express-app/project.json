@@ -7,7 +7,7 @@
     "build": {
       "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "defaultConfiguration": "development",
       "options": {
         "target": "node",
         "compiler": "tsc",
@@ -19,8 +19,22 @@
         "webpackConfig": "apps/express-app/webpack.config.js"
       },
       "configurations": {
-        "development": {},
-        "production": {}
+        "development": {
+          "fileReplacements": [
+            {
+              "replace": "apps/express-app/src/environments/environment.ts",
+              "with": "apps/express-app/src/environments/environment.development.ts"
+            }
+          ]
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/express-app/src/environments/environment.ts",
+              "with": "apps/express-app/src/environments/environment.production.ts"
+            }
+          ]
+        }
       }
     },
     "serve": {
