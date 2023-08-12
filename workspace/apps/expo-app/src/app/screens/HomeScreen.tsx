@@ -2,7 +2,7 @@ import {Button, Text, View} from "react-native";
 import {HomeScreenProps} from "../navigators/AuthenticatedNavigator";
 
 
-const HomeScreen = ({navigation}: HomeScreenProps) => {
+const HomeScreen = ({route, navigation}: HomeScreenProps) => {
   const profile = () => {
     navigation.navigate('ProfileScreen');
   }

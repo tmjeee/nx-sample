@@ -8,4 +8,5 @@ export const InitialAppContextState: AppContextState = {
   state: 'login'
 };
 
-export const AppContext = createContext<[AppContextState, React.Dispatch<SetStateAction<AppContextState>>]>([] as any);
+export const AppContext =
+    createContext<[AppContextState, React.Dispatch<SetStateAction<AppContextState>>]>([] as any);

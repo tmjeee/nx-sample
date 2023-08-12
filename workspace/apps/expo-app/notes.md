@@ -8,7 +8,7 @@
 * XxxParamList fields are screen or navigator names where navigator names are undefineable
 
 ### XxxScreenProps
-* Each actual screen (not navigators) will have a XxxProps of its own derivable from XxxParamList through react-navigation's XxxScreenProps<...>
+* Each actual screen (not navigators) will have a XxxScreenProps of its own derivable from XxxParamList through react-navigation's XxxScreenProps<...>
 * CompositeScreenProps 2nd parameterized variable is the immediate navigator
 
 ### Example
